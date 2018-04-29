@@ -6,17 +6,21 @@ The value is then converted to binary code and Merkle-Hellman Cryptosystem is ex
 In C , we have #define invisible which makes the program run in the background without the users knowledge . We are planning to use this feature of C to execute the keyloggers without the users knowledge. A person get the keylog data using internet without the knowledge of the user
 
 Merkle-Hellman Algorithm:
+
 Key generation: 
 In Merkle-Hellman, We are going to use two keys.[7] .One of them is a public key which is called as hard knapsack A, and the other is private key wihch called as an easy knapsack B combined with a multiplier number and a modulus number  to compute the keys efficiently. First to encrypt any n-bit messages, we should  choose a superincreasing sequence w = (w1, w2, ..., wn) .
 Pick a random integer q, such that q>w.and a random integer, r, such that gcd(r,q) = 1 (i.e. r and q are coprime). Now calculate the sequence β = (β1, β2, ..., βn) βi = rwi mod q. The public key is β, while the private key is (w, q, r). 
 
 Encryption:
+
 To encrypt a message, the first key, A is chosen by comparing it with a set of bits (the plaintext) equal in length to the key. Each term in the public key that corresponds to a 1 in the plaintext is an element of the subset A_m, terms that corresponding to 0 in the plaintext are ignored when constructing A_m .The elements of this subset are added together and the resulting sum is the ciphertext. 
 
-Decryption
+Decryption:
+
 Decryption is possible because the multiplier and modulus is used. It is just opposite of the encryption by using Private key ,Message integer and the inverse of r modulo q using the Extended Euclidean Division.
 
 Example 
+
 First, a super increasing sequence w is created 
 w = {2, 7, 11, 21, 42, 89, 180, 354} 
 This is the basis for a private key. From this, calculate the sum. 
